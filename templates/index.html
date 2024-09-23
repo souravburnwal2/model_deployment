@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Premium Calculator</title>
+</head>
+<body>
+    <h1>Enter Your Age to Calculate Premium</h1>
+    <form action="/predict" method="POST">
+        <input type="number" name="age" placeholder="Enter your age" required>
+        <button type="submit">Calculate Premium</button>
+    </form>
+
+    {% if premium %}
+        <h2>{{ premium }}</h2>
+    {% endif %}
+</body>
+</html>
